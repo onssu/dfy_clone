@@ -1,5 +1,5 @@
 /* font */
-/* @import url('./styles/font.css'); */
+/* @import url("./styles/font.css"); */
 
 /* all */
 * {
@@ -13,6 +13,11 @@
 }
 *:focus {
   outline: 0;
+}
+
+:lang(ko) * {
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 
 html,
