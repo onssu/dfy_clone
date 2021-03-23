@@ -1,34 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 
-// const menu = [
-//   {
-//     link: "https://naver.com",
-//     text: "프로젝트",
-//   },
-//   {
-//     link: "https://naver.com",
-//     text: "프로젝트",
-//   },
-//   {
-//     link: "https://naver.com",
-//     text: "프로젝트",
-//   },
-//   {
-//     link: "https://naver.com",
-//     text: "프로젝트",
-//   },
-// ];
-
-// const MenuFn = menu.map((link, text) => <a href={"link"}>{text}</a>);
-
 const Footer: React.FC = () => {
+  const menu = [
+    {
+      link: "https://naver.com",
+      text: "프로젝트",
+    },
+    {
+      link: "https://naver.com",
+      text: "프로젝트",
+    },
+    {
+      link: "https://naver.com",
+      text: "프로젝트",
+    },
+    {
+      link: "https://naver.com",
+      text: "프로젝트",
+    },
+  ];
+
   return (
     <Container>
       <div className="max-width">
         <div className="max-area">
           <nav className="menus">
-            <ul></ul>
+            <ul>
+              {menu.map((obj: any, inx: number) => (
+                <a key={inx} href={obj.link}>
+                  {obj.text}
+                </a>
+              ))}
+            </ul>
           </nav>
           <div className="copyright">
             <p>
