@@ -57,13 +57,18 @@ const Header: React.FC = () => {
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  z-index: 999;
+  position: fixed;
+`;
 
 const Logo = styled.a`
+  z-index: 10;
   position: absolute;
 `;
 
 const Title = styled.p`
+  z-index: 10;
   position: absolute;
   color: #fff;
   top: 29px;
@@ -73,25 +78,82 @@ const Title = styled.p`
 const Hamburger = styled.div`
   position: fixed;
   z-index: 10;
-  left: 90.5%;
-  top: 33px;
+  left: 91.8%;
+  top: 43px;
+  color: #fff;
 `;
 
-const Ohamburger = styled.a``;
+const Ohamburger = styled.a`
+  border-color: #fff;
+  background-color: transparent;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+`;
 
-const A = styled.span``;
+const A = styled.span`
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 1;
+  text-align: center;
+`;
 
-const LineH = styled.span``;
+const LineH = styled.span`
+  position: absolute;
+`;
 
-const WordM = styled.span``;
+const WordM = styled.span`
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 7%;
+  top: 6%;
+  text-align: center;
+  vertical-align: middle;
+`;
 
-const WordE = styled.span``;
+const WordE = styled.span`
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 1%;
+  top: 6%;
+  text-align: center;
+  vertical-align: middle;
+`;
 
-const WordN = styled.span``;
+const WordN = styled.span`
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 6%;
+  bottom: 2%;
+  text-align: center;
+  vertical-align: middle;
+`;
 
-const WordU = styled.span``;
+const WordU = styled.span`
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 1%;
+  bottom: 2%;
+  text-align: center;
+  vertical-align: middle;
+`;
 
-const LineV = styled.span``;
+const LineV = styled.span`
+  position: absolute;
+`;
 
 const Nav = styled.nav``;
 

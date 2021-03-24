@@ -23,70 +23,69 @@ const Footer: React.FC = () => {
 
   return (
     <Container>
-      <div className="max-width">
-        <div className="max-area">
-          <nav className="menus">
-            <ul>
-              {menu.map((obj: any, inx: number) => (
-                <a key={inx} href={obj.link}>
+      <MenuWrap>
+        <Menus>
+          <ul>
+            {menu.map((obj: any, index: number) => (
+              <li>
+                <a key={index} href={obj.link}>
                   {obj.text}
                 </a>
-              ))}
-            </ul>
-          </nav>
-          <div className="copyright">
-            <p>
-              <span>© DFY Inc.</span>
-              <span>DEFY THE CURRENT™</span>" All rights reserved. "
-            </p>
-          </div>
-        </div>
-      </div>
+              </li>
+            ))}
+          </ul>
+        </Menus>
+
+        <CopyRight>
+          <p>
+            <span>© DFY Inc.</span>
+            <span>DEFY THE CURRENT™</span>" All rights reserved. "
+          </p>
+        </CopyRight>
+      </MenuWrap>
     </Container>
   );
 };
 
 const Container = styled.div`
   display: block;
-  height: 160px;
+  height: 196px;
   position: relative;
   bottom: 0;
   z-index: 4;
   overflow: hidden;
   background: transparent;
+`;
 
-  .max-width {
-    width: 100%;
-    margin: 0 auto;
+const MenuWrap = styled.div`
+  padding-top: 100px;
+  padding-left: 30.9%;
+`;
 
-    .max-area {
-      padding-top: 100px;
-      padding-left: 30.9%;
+const Menus = styled.nav`
+  overflow: hidden;
+  margin-left: -12px;
+  li {
+    float: left;
 
-      @media screen and (max-width: 768px) {
-        padding-top: 62px;
-        padding-left: 11.87%;
-      }
+    a {
+      padding: 6px 12px 6px 13px;
+      font-family: "YoonGothicPro770";
+      font-size: 11px;
+      line-height: 1.64;
+      font-weight: normal;
+    }
+  }
+`;
 
-      .menus {
-        display: none;
-        margin-left: -12px;
-      }
-
-      .copyright {
-        width: 130px;
-        margin-top: 16px;
-
-        p {
-          font-family: "Replica-Bold";
-          font-size: 12px;
-          line-height: 18px;
-
-          span {
-            display: inline-block;
-          }
-        }
-      }
+const CopyRight = styled.div`
+  margin-top: 16px;
+  p {
+    font-family: "Replica-Bold";
+    font-size: 12px;
+    line-height: 18px;
+    span {
+      display: inline-block;
     }
   }
 `;
