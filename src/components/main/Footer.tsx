@@ -27,10 +27,8 @@ const Footer: React.FC = () => {
         <Menus>
           <ul>
             {menu.map((obj: any, index: number) => (
-              <li>
-                <a key={index} href={obj.link}>
-                  {obj.text}
-                </a>
+              <li key={index}>
+                <a href={obj.link}>{obj.text}</a>
               </li>
             ))}
           </ul>
